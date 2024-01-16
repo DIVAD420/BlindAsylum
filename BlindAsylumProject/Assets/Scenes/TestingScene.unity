@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.00405688, g: 0.00022173295, b: 0.00000005558148, a: 1}
+  m_IndirectSpecularColor: {r: 0.004056882, g: 0.00022173302, b: 0.00000005558148, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -207,8 +207,8 @@ MonoBehaviour:
   controller: {fileID: 3922503}
   walkSpeed: 2
   sprintSpeed: 4
-  gravity: -9.81
-  jumpHeight: 20
+  gravity: -19.81
+  jumpHeight: 1
   canMove: 0
   groundCheck: {fileID: 1393265571}
   groundDistance: 0.4
@@ -417,6 +417,8 @@ GameObject:
   - component: {fileID: 734357195}
   - component: {fileID: 734357194}
   - component: {fileID: 734357197}
+  - component: {fileID: 734357199}
+  - component: {fileID: 734357198}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -566,6 +568,55 @@ MonoBehaviour:
   playerBody: {fileID: 3922502}
   playerMovementScript: {fileID: 0}
   canLook: 0
+--- !u!114 &734357198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734357192}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e481a4e873e65428add23abe4159fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 9170eb6e7c9fe794893bb77e473e12d3, type: 3}
+  VHSClip: {fileID: 32900000, guid: 0ba052fbb801a3e45ab652cdd4fdb5b6, type: 3}
+--- !u!328 &734357199
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734357192}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 0ba052fbb801a3e45ab652cdd4fdb5b6, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 734357196}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 4
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 0
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1 &920814634
 GameObject:
   m_ObjectHideFlags: 0
